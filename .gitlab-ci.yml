@@ -1,0 +1,19 @@
+image: python:3.10
+
+# Define stages for the pipeline.
+stages:
+  - test
+
+# Define the job to run tests.
+test:
+  stage: test
+  script:
+    # Install dependencies (if needed)
+    - pip install pytest pytest-html
+
+    # Run pytest with HTML report generation
+    - pytest --html=report.html
+
+  artifacts:
+    paths:
+      - report.html
