@@ -16,5 +16,5 @@ test:
 
   artifacts:
     paths:
-      - input.txt
+      - Day_01_2021 /input.txt
       - report.html
