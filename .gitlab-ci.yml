@@ -9,7 +9,7 @@ test:
   stage: test
   script:
     # Install dependencies (if needed)
-    - pip install pytest pytest-html cachetools
+    - pip install pytest pytest-html
 
     # Run pytest with HTML report generation
     - pytest --html=report.html
