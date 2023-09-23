@@ -16,5 +16,5 @@ test:
 
   artifacts:
     paths:
-      - TDD-Recap /input.txt
+      - TDD-Recap/input.txt
       - report.html
