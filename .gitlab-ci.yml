@@ -16,4 +16,5 @@ test:
 
   artifacts:
     paths:
+      - input.txt
       - report.html
