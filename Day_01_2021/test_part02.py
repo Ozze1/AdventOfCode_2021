@@ -1,5 +1,16 @@
 import pytest
 
+from cachetools import cached, LRUCache
+
+cache = LRUCache(maxsize=100)
+
+@cached(cache=cache)
+def load_input_file():
+  with open('input.txt', 'r') as f:
+    depth_measurements = [int(line) for line in f]
+    return depth_measurements
+
+
 def count_depth_increases_sliding_window(depth_measurements):
 
   sums = []
@@ -22,9 +33,7 @@ def example_input():
 
 @pytest.fixture
 def real_input():
-  with open('input.txt', 'r') as f:
-    depth_measurements = [int(line) for line in f]
-    return depth_measurements
+  return load_input_file()
 
 
 def test_example_input(example_input):
