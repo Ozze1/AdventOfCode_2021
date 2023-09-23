@@ -16,5 +16,5 @@ test:
 
   artifacts:
     paths:
-      - Day_01_2021 /input.txt
+      - TDD-Recap /input.txt
       - report.html
