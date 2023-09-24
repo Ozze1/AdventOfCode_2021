@@ -11,7 +11,7 @@ input_file_path = os.path.join(script_dir, 'input.txt')
 
 @pytest.fixture
 def real_input():
-  with open('input.txt', 'r') as f:
+  with open(input_file_path, 'r') as f:
     commands = [line.strip() for line in f]
 
   return commands
