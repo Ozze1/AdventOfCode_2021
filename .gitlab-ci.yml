@@ -9,7 +9,7 @@ test:
   stage: test
   script:
     # Install dependencies (if needed)
-    - pip install pytest pytest-html
+    - pip install pytest pytest-html junit-xml
 
     # Run pytest with HTML report generation
     - pytest --html=report.html
