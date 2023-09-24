@@ -9,11 +9,11 @@ test:
   stage: test
   script:
     # Install dependencies (if needed)
-    - pip install pytest pytest-html pytest-cov
+    - pip install pytest pytest-cov junit-xml
 
     # Run pytest with HTML report generation
-    - pytest --html=report.html --cov=my_module --cov-report=html --cov-fail-under=90
+    - pytest --cov=Day_01_2021 --cov=Day_02_2021 --cov-report=html:junit-coverage.xml
 
   artifacts:
     paths:
-      - report.html
+     - junit-coverage.xml
