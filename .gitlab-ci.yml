@@ -9,10 +9,10 @@ test:
   stage: test
   script:
     # Install dependencies (if needed)
-    - pip install pytest pytest-html junit-xml
+    - pip install pytest pytest-html pytest-cov
 
     # Run pytest with HTML report generation
-    - pytest --html=report.html
+    - pytest --html=report.html --cov=my_module --cov-report=html --cov-fail-under=90
 
   artifacts:
     paths:
