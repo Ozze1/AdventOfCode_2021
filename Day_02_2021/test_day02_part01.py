@@ -9,6 +9,12 @@ script_dir = os.path.dirname(__file__)
 # Specify the full path to 'input.txt'
 input_file_path = os.path.join(script_dir, 'input.txt')
 
+@pytest.fixture
+def real_input():
+  with open('input.txt', 'r') as f:
+    commands = [line.strip() for line in f]
+
+  return commands
 
 @pytest.fixture
 def example_input():
@@ -21,13 +27,6 @@ def example_input():
       'down 7',
   ]
 
-
-@pytest.fixture
-def real_input():
-  with open('input.txt', 'r') as f:
-    commands = [line.strip() for line in f]
-
-  return commands
 
 
 def test_calculate_submarine_position_example_input(example_input):
