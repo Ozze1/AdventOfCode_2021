@@ -1,6 +1,9 @@
 # AdventOfCode_2021
 
 
+[![coverage report](https://gitlab.com/OsamaBeshir/adventofcode_2021/badges/main/coverage.svg)](https://gitlab.com/OsamaBeshir/adventofcode_2021/-/commits/main)
+
+
 
 ## Getting started
 
